@@ -4,6 +4,7 @@ import Card from "../UI/Card";
 import './Expenses.css';
 import ExpensesFilter from "../NewExpense/ExpensesFilter";
 import ExpensesList from "../NewExpense/ExpensesList";
+import ExepnesesChart from "./ExpensesChart";
 
 const Expenses = (props) => {
 
@@ -18,6 +19,7 @@ const Expenses = (props) => {
     <div>
       <Card className="expenses">
         <ExpensesFilter selected={fileteredYear} onSelectYear={onChangeYear} />
+        <ExepnesesChart expenses={filterMap}/>
         <ExpensesList items={filterMap}/>
       </Card>
     </div>
